@@ -120,9 +120,9 @@ const TodoSubmitButton = styled.button`
     margin-right: 0px;
     font-size: 15px;
     letter-spacing: 3px;
-    padding-left: 10px;
     height: 35px;
-    text-aling: center;
+    text-align: center;
+    padding-left: 10px;
   }
 
   :hover {
@@ -174,10 +174,10 @@ const AllTodos = styled.button`
   }
 
   ${MEDIA_QUERY_SM} {
-    font-size: 15px;
+    font-size: 14px;
     margin: 0px;
     height: 35px;
-    width: 70px;
+    width: 73px;
     letter-spacing: 1px;
     padding: 0px;
     text-align: center;

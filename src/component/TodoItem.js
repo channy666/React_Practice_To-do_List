@@ -141,7 +141,7 @@ const TodoButton = styled.button`
 
   ${MEDIA_QUERY_SM} {
     position: absolute;
-    font-size: 12.5px;
+    font-size: 12px;
     height: 30px;
     width: 60px;
     right: -10px;
