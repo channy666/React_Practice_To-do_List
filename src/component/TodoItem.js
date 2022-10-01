@@ -141,12 +141,12 @@ const TodoButton = styled.button`
 
   ${MEDIA_QUERY_SM} {
     position: absolute;
-    font-size: 13px;
+    font-size: 12.5px;
     height: 30px;
-    width: 55px;
-    padding-left: 7px;
+    width: 60px;
     right: -10px;
-    top: 10px;
+    top: 9px;
+    text-align: center;
 
     ${(props) =>
       !props.$show &&
@@ -188,7 +188,7 @@ const EditTodoButton = styled(RedTodoButton)`
   }
 
   ${MEDIA_QUERY_SM} {
-    top: -21px;
+    top: -23px;
   }
 `;
 

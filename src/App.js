@@ -45,13 +45,14 @@ const AddTodo = styled.div`
   justify-content: space-between;
   margin: 40px 30px 30px 30px;
   flex-wrap: wrap;
+  align-items: center;
 
   ${MEDIA_QUERY_MD} {
     margin: 30px 30px 25px 30px;
   }
 
   ${MEDIA_QUERY_SM} {
-    margin: 25px 20px;
+    margin: 25px 15px;
   }
 `;
 
@@ -60,22 +61,23 @@ const TodoInput = styled.input`
   margin-left: 30px;
   font-size: 18px;
   letter-spacing: 1px;
+  height: 35px;
 
   ${MEDIA_QUERY_LG} {
     margin-left: 35px;
     font-size: 17px;
     width: 72%;
+    height: 32px;
   }
 
   ${MEDIA_QUERY_MD} {
     margin-left: 35px;
     width: 65%;
-    height: 32px;
   }
 
   ${MEDIA_QUERY_SM} {
     margin-left: 15px;
-    width: 67%;
+    width: 66%;
     height: 30px;
     font-size: 16px;
   }
@@ -120,6 +122,7 @@ const TodoSubmitButton = styled.button`
     letter-spacing: 3px;
     padding-left: 10px;
     height: 35px;
+    text-aling: center;
   }
 
   :hover {
@@ -138,7 +141,7 @@ const Filter = styled.div`
   }
 
   ${MEDIA_QUERY_SM} {
-    margin: 20px 20px 15px 20px;
+    margin: 20px;
     justify-content: space-around;
   }
 `;
@@ -174,9 +177,10 @@ const AllTodos = styled.button`
     font-size: 15px;
     margin: 0px;
     height: 35px;
-    width: 65px;
+    width: 70px;
     letter-spacing: 1px;
-    padding-left: 8px;
+    padding: 0px;
+    text-align: center;
   }
 
   :hover {
