@@ -118,8 +118,9 @@ const TodoSubmitButton = styled.button`
   ${MEDIA_QUERY_SM} {
     width: 21%;
     margin-right: 0px;
-    font-size: 15px;
-    letter-spacing: 3px;
+    font-size: 16px;
+    letter-spacing: normal;
+    padding: 0px;
     height: 35px;
     align-items: center;
     justify-content: center;

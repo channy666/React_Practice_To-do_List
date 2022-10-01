@@ -92,6 +92,7 @@ const EditTodoContent = styled.input`
 
   ${MEDIA_QUERY_SM} {
     width: 70%;
+    font-size: 17px;
   }
 `;
 
@@ -141,11 +142,11 @@ const TodoButton = styled.button`
 
   ${MEDIA_QUERY_SM} {
     position: absolute;
-    font-size: 12px;
+    font-size: 13px;
     height: 30px;
     width: 60px;
     right: -10px;
-    top: 9px;
+    top: 8px;
     letter-spacing: normal;
     padding: 0;
     display: flex;
@@ -180,7 +181,7 @@ const RedTodoButton = styled(TodoButton)`
   }
 
   ${MEDIA_QUERY_SM} {
-    top: 41px;
+    top: 40px;
     padding: 0px;
     letter-spacing: normal;
   }
@@ -194,7 +195,7 @@ const EditTodoButton = styled(RedTodoButton)`
   }
 
   ${MEDIA_QUERY_SM} {
-    top: -23px;
+    top: -24px;
   }
 `;
 
@@ -282,15 +283,23 @@ function TodoItem({
   const [showTodoButtons, setShowTodoButtons] = useState(false);
 
   useEffect(() => {
-    if (isEditing) editTodoInputRef.current.focus();
+    if (isEditing) {
+      editTodoInputRef.current.focus();
+    } else {
+      setShowTodoButtons(false);
+    }
   }, [isEditing]);
 
-  const handleMouseEnterTodoButtons = useCallback(() => {
-    setShowTodoButtons(true);
-  }, []);
+  useEffect(() => {
+    setShowTodoButtons(false);
+  }, [todo]);
 
   const handleMouseLeaveTodoButtons = useCallback(() => {
     setShowTodoButtons(false);
+  }, []);
+
+  const handleShowTodoButtons = useCallback(() => {
+    setShowTodoButtons(true);
   }, []);
 
   return (
@@ -307,11 +316,8 @@ function TodoItem({
           onKeyDown={handleFinishEditTodo}
         />
       )}
-      <TodoButtons
-        onMouseEnter={handleMouseEnterTodoButtons}
-        onMouseLeave={handleMouseLeaveTodoButtons}
-      >
-        <HamburgerIcon>
+      <TodoButtons onMouseLeave={handleMouseLeaveTodoButtons}>
+        <HamburgerIcon onClick={handleShowTodoButtons}>
           <HamburgerIconLine $hover={showTodoButtons} />
         </HamburgerIcon>
         {!isEditing && (
