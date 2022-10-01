@@ -146,7 +146,11 @@ const TodoButton = styled.button`
     width: 60px;
     right: -10px;
     top: 9px;
-    text-align: center;
+    letter-spacing: normal;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     ${(props) =>
       !props.$show &&
@@ -177,6 +181,8 @@ const RedTodoButton = styled(TodoButton)`
 
   ${MEDIA_QUERY_SM} {
     top: 41px;
+    padding: 0px;
+    letter-spacing: normal;
   }
 `;
 

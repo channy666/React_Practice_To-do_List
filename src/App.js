@@ -121,8 +121,9 @@ const TodoSubmitButton = styled.button`
     font-size: 15px;
     letter-spacing: 3px;
     height: 35px;
-    text-align: center;
-    padding-left: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
   }
 
   :hover {
@@ -178,9 +179,11 @@ const AllTodos = styled.button`
     margin: 0px;
     height: 35px;
     width: 73px;
-    letter-spacing: 1px;
+    letter-spacing: normal;
     padding: 0px;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
   }
 
   :hover {
