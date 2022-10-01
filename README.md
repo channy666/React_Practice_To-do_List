@@ -2,7 +2,7 @@
 
 使用 React 實作的簡易 To-do List。
 
-[To-do List 連結]()
+[To-do List 連結](https://channy666.github.io/React_Practice_To-do_List/)
 
 ## 功能介紹
 
